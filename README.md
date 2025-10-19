@@ -71,3 +71,10 @@ dotnet ef migrations add InitialCreate -s API -p Infrastructure
 dotnet ef database update -s API -p Infrastructure
 
 ```
+
+## API Architecture
+
+### Repository pattern
+decouble the business code from data access - separation of concerns
+minimise duplicate query logic
+testability
