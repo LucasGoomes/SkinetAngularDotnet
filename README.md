@@ -78,3 +78,11 @@ dotnet ef database update -s API -p Infrastructure
 decouble the business code from data access - separation of concerns
 minimise duplicate query logic
 testability
+
+### specification pattern
+if we have to much repositories, creating generic repository facilitate. But generic repository excludes the possibility of using specific repositories atributes, for example,
+price, because not all repositories have that. we fix that by using the specification pattern.
+- Describes a query in an object
+- returns an IQueryable<T>
+- Generic List method takes specification as a parameter
+- Specification can have meaningful name

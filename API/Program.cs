@@ -15,7 +15,7 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 }); // Added DbContext service passing options (connection string)
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>(); // Added repository service - Scoped means one instance per request - live as long as the http request
-
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); // Added generic repository service - typeof used for open generic types
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
