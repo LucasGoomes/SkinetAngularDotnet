@@ -90,3 +90,9 @@ price, because not all repositories have that. we fix that by using the specific
 ### Pagination
 - Perfomance, only show some products to the user, only show more if they want to see it
 - Parameters passed by query string pageNumber=2&pageSize=5
+
+
+## Client
+Angular application + Angular Materials + TailwindCSS
+https://material.angular.dev/
+https://tailwindcss.com/

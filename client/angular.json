@@ -30,7 +30,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/tailwind.css",
+              "@angular/material/prebuilt-themes/azure-blue.css"
             ]
           },
           "configurations": {
