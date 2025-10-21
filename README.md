@@ -86,3 +86,7 @@ price, because not all repositories have that. we fix that by using the specific
 - returns an IQueryable<T>
 - Generic List method takes specification as a parameter
 - Specification can have meaningful name
+
+### Pagination
+- Perfomance, only show some products to the user, only show more if they want to see it
+- Parameters passed by query string pageNumber=2&pageSize=5
