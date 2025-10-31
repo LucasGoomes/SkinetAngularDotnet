@@ -23,4 +23,13 @@ public static class ClaimsPrincipleExtensions
         var email = user.FindFirstValue(ClaimTypes.Email) ?? throw new AuthenticationException("Email claim not found");
         return email;
     }
+
+    public static async Task<AppUser> GetUserByEmailWithAddress(this UserManager<AppUser> userManager, ClaimsPrincipal user)
+    {
+        var usertoReturn = await userManager.Users.Include(x => x.Address).FirstOrDefaultAsync(x => x.Email == user.GetEmail());
+
+        if (usertoReturn == null) throw new AuthenticationException("User not found.");
+
+        return usertoReturn;
+    }
 }
