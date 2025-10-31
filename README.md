@@ -96,3 +96,8 @@ price, because not all repositories have that. we fix that by using the specific
 Angular application + Angular Materials + TailwindCSS
 https://material.angular.dev/
 https://tailwindcss.com/
+
+
+add API identity migration
+dotnet ef migrations add IdentityAdded -s API -p Infrastructure
+Identity provides authentication endpoints with Bearer token or Cookies - HttpOnly
